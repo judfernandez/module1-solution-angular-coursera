@@ -11,8 +11,7 @@
 
     $scope.sayMessage = function () {
       var itemsLunch = $scope.lunchInput.split(',');
-      console.log(itemsLunch);
-      if (itemsLunch[0] === '') {
+      if ((itemsLunch[0] === '') && (itemsLunch.length === 1)) {
         $scope.message = ('Please enter data first');
       } else if (itemsLunch.length <= 3) {
         $scope.message = ('Enjoy');
